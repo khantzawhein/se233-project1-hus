@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseReleased="#updateText" prefHeight="472.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se233.project_watermark.WaterMarkComtroller">
+   <children>
+      <Button layoutX="591.0" layoutY="15.0" mnemonicParsing="false" onAction="#backToMenu" text="BackToMenu" />
+      <Text layoutX="27.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextField fx:id="textField" layoutX="27.0" layoutY="40.0" />
+      <Button fx:id="Back" layoutX="382.0" layoutY="371.0" mnemonicParsing="false" onAction="#previousImage" prefHeight="26.0" prefWidth="75.0" text="Back" />
+      <Button fx:id="Next" layoutX="557.0" layoutY="371.0" mnemonicParsing="false" onAction="#nexImage" prefHeight="26.0" prefWidth="75.0" text="Next" />
+      <Text fx:id="TextRotation" layoutX="88.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rotation" />
+      <Slider fx:id="SliderRotation" layoutX="27.0" layoutY="169.0" max="180.0" min="-180.0" onMouseReleased="#updateText" prefHeight="33.0" prefWidth="200.0" showTickLabels="true" />
+      <Text fx:id="TextSize" layoutX="64.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size" wrappingWidth="22.13671875" />
+      <Slider fx:id="SliderSize" layoutX="27.0" layoutY="230.0" max="1500.0" min="5.0" onMouseReleased="#updateText" prefHeight="33.0" prefWidth="200.0" value="500.0" />
+      <Text fx:id="TextSlidervisibility" layoutX="87.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visibility" />
+      <Slider fx:id="Slidervisibility" layoutX="27.0" layoutY="307.0" onMouseReleased="#updateText" prefWidth="200.0" showTickLabels="true" value="100.0" />
+      <Button fx:id="ApplyButton" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onAction="#updateImageWithWaterMark" prefHeight="26.0" prefWidth="58.0" text="Apply" />
+      <Pane layoutX="382.0" layoutY="119.0" prefHeight="160.0" prefWidth="250.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="160.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Slider fx:id="SliderImageQuality" layoutX="27.0" layoutY="105.0" min="1.0" prefHeight="33.0" prefWidth="200.0" showTickLabels="true" value="100.0" />
+      <Text fx:id="TextImageQuality" layoutX="112.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Quality" />
+      <Button fx:id="saveButton" layoutX="168.0" layoutY="371.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="26.0" prefWidth="58.0" text="Save" />
+      <Text layoutX="32.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visibility :" textAlignment="CENTER" />
+      <Text layoutX="31.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size :" />
+      <Text layoutX="31.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rotation :" />
+      <Text layoutX="27.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Quality :" />
+      <ComboBox fx:id="outputFormat" layoutX="243.0" layoutY="40.0" prefWidth="150.0" promptText="Choose a Format" />
+      <Text layoutX="243.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output Format" />
+      <ProgressBar fx:id="progressBar" layoutX="407.0" layoutY="323.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>
